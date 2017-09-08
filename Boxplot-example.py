@@ -12,11 +12,6 @@ import matplotlib.lines as mlines
 
 
 
-#colnames = ['Algorithms','Benchmark','dim','Matlab','Python']
-
-
-
-
 data = pandas.read_csv('Accuracy.csv')
 
     
@@ -32,8 +27,10 @@ box=plt.boxplot(data3, labels=labels, patch_artist=True)
 colors = ['red', 'blue', 'green', 'pink']
 for patch, color in zip(box['boxes'], colors):
     patch.set_facecolor(color)
+    
+    
 #plt.xlabel('Classifier')
-#plt.ylabel('')
+
 
 #plt.xlabel('xlabel', fontsize=22)
 plt.ylabel('Accuracy', fontsize=22)
